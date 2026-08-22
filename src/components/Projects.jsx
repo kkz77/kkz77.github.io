@@ -2,11 +2,20 @@ import Section from './Section.jsx'
 import { projects } from '../data/profile.js'
 
 function ProjectCard({ p }) {
+  const hasLink = Boolean(p.link)
+
+  // Whole card is a link when a repo URL exists; otherwise a plain container.
+  const Wrapper = hasLink ? 'a' : 'div'
+  const wrapperProps = hasLink
+    ? { href: p.link, target: '_blank', rel: 'noreferrer', 'aria-label': `${p.title} on GitHub` }
+    : {}
+
   return (
-    <div
+    <Wrapper
+      {...wrapperProps}
       className={`group flex flex-col overflow-hidden rounded-xl border border-line bg-panel transition hover:border-accent/50 hover:bg-panelHover ${
-        p.featured ? 'md:col-span-2' : ''
-      }`}
+        hasLink ? 'cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-black/20' : ''
+      } ${p.featured ? 'md:col-span-2' : ''}`}
     >
       {p.image && (
         <div className="relative aspect-[2/1] overflow-hidden border-b border-line">
@@ -24,16 +33,10 @@ function ProjectCard({ p }) {
             <p className="text-xs font-medium text-accent">{p.tag}</p>
             <h3 className="mt-1 text-lg font-semibold text-heading">{p.title}</h3>
           </div>
-          {p.link && (
-            <a
-              href={p.link}
-              target="_blank"
-              rel="noreferrer"
-              className="shrink-0 text-sm text-muted hover:text-heading"
-              aria-label={`${p.title} on GitHub`}
-            >
+          {hasLink && (
+            <span className="shrink-0 text-sm text-muted transition group-hover:text-accent">
               Code ↗
-            </a>
+            </span>
           )}
         </div>
 
@@ -45,15 +48,21 @@ function ProjectCard({ p }) {
           </p>
         )}
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap items-center gap-2">
           {p.tech.map((t) => (
             <span key={t} className="rounded-md bg-chip px-2 py-1 text-xs text-muted">
               {t}
             </span>
           ))}
         </div>
+
+        {hasLink && (
+          <p className="mt-4 text-sm font-medium text-accent">
+            View on GitHub <span className="transition group-hover:translate-x-0.5 inline-block">→</span>
+          </p>
+        )}
       </div>
-    </div>
+    </Wrapper>
   )
 }
 
