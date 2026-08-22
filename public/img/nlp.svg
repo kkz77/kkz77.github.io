@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="NLP summarization illustration">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#g)"/>
+  <g opacity="0.28" fill="#ffffff">
+    <rect x="90" y="90" width="300" height="16" rx="8"/>
+    <rect x="90" y="120" width="360" height="16" rx="8"/>
+    <rect x="90" y="150" width="240" height="16" rx="8"/>
+    <rect x="90" y="180" width="320" height="16" rx="8"/>
+  </g>
+  <g opacity="0.95" fill="#ffffff">
+    <rect x="470" y="240" width="240" height="14" rx="7"/>
+    <rect x="470" y="268" width="180" height="14" rx="7"/>
+  </g>
+  <path d="M400 150 L470 250" stroke="#ffffff" stroke-width="3" opacity="0.5" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#ffffff"/></marker></defs>
+  <text x="60" y="60" fill="#ffffff" font-family="Inter, sans-serif" font-size="22" font-weight="700" opacity="0.9">NLP · Summarization</text>
+  <text x="470" y="225" fill="#c4b5fd" font-family="Inter, sans-serif" font-size="16" font-weight="600">Summary + Entities</text>
+</svg>

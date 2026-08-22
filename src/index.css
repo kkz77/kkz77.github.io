@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   THEME TOKENS
+   Default (:root) = DARK  (your primary look, unchanged)
+   [data-theme="light"] = warm YELLOW / amber light mode
+   Values are "R G B" channels so Tailwind opacity utilities work.
+   ───────────────────────────────────────────── */
+:root {
+  --c-bg: 2 6 23;            /* slate-950 */
+  --c-panel: 17 24 39;       /* subtle raised surface */
+  --c-panel-hover: 30 41 59;
+  --c-line: 51 65 85;        /* borders */
+  --c-heading: 255 255 255;
+  --c-body: 226 232 240;     /* slate-200 */
+  --c-muted: 148 163 184;    /* slate-400 */
+  --c-faint: 100 116 139;    /* slate-500 */
+  --c-accent: 129 140 248;   /* brand-400 */
+  --c-accent-btn: 79 70 229; /* brand-600 */
+  --c-accent-btn-hover: 99 102 241;
+  --c-on-accent: 255 255 255;
+  --c-accent-soft: 30 27 75;      /* result chip bg */
+  --c-accent-soft-text: 165 180 252;
+  --c-chip: 30 41 59;             /* tech chips */
+  --c-grad-from: 79 70 229;       /* avatar / accents gradient */
+  --c-grad-to: 8 145 178;
+  --c-glow: 99 102 241;           /* hero glow */
+  --c-glow-2: 129 140 248;
+}
+
+[data-theme='light'] {
+  --c-bg: 255 251 235;       /* warm amber-50 */
+  --c-panel: 255 255 255;
+  --c-panel-hover: 254 248 224;
+  --c-line: 251 220 130;     /* soft amber border */
+  --c-heading: 41 37 36;     /* stone-800 */
+  --c-body: 68 64 60;        /* stone-700 */
+  --c-muted: 120 113 108;    /* stone-500 */
+  --c-faint: 168 162 158;    /* stone-400 */
+  --c-accent: 180 83 9;      /* amber-700 */
+  --c-accent-btn: 217 119 6; /* amber-600 */
+  --c-accent-btn-hover: 180 83 9;
+  --c-on-accent: 255 255 255;
+  --c-accent-soft: 254 243 199;   /* amber-100 */
+  --c-accent-soft-text: 146 64 14; /* amber-800 */
+  --c-chip: 254 243 199;          /* amber-100 */
+  --c-grad-from: 217 119 6;       /* amber-600 */
+  --c-grad-to: 234 88 12;         /* orange-600 */
+  --c-glow: 234 179 8;            /* amber-500 */
+  --c-glow-2: 251 191 36;         /* amber-400 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--c-bg));
+  color: rgb(var(--c-body));
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Subtle animated gradient glow behind the hero */
+.hero-glow {
+  background:
+    radial-gradient(600px circle at 20% 10%, rgb(var(--c-glow) / 0.18), transparent 40%),
+    radial-gradient(500px circle at 80% 20%, rgb(var(--c-glow-2) / 0.12), transparent 40%);
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
