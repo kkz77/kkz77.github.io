@@ -138,6 +138,19 @@ export const achievements = [
   },
 ]
 
+// Your name is highlighted automatically wherever it appears in `authors`.
+export const publications = [
+  {
+    authors:
+      'Hlaing Myat Nwe, Kaung Khant Zaw, Ye Kyaw Thu, Natthawut Kertkeidkachorn, Thepchai Supnithi, Rathachai Chawuthai, Kiyoaki Shirai, Thanaruk Theeramunkong',
+    title: 'Named Entity-Aware Model for Burmese Abstractive Summarization',
+    venue: 'IEEE Access',
+    status: 'Under Review',
+    year: '2026',
+    url: '', // add a link (arXiv, DOI, PDF) once available
+  },
+]
+
 export const languages = [
   { name: 'English', level: 'Fluent' },
   { name: 'Myanmar', level: 'Native' },
