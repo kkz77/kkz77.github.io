@@ -55,6 +55,7 @@ export const projects = [
     result: '+4.06% improvement over the previous best fine-tuned Burmese mT5 model.',
     tech: ['mT5', 'Transformers', 'CRF', 'Stanza', 'PyTorch', 'NLP'],
     link: null,
+    publicationHref: '#publications', // this project is written up in the Publications section
   },
   {
     title: 'Optical Network Resource Allocation with DRL',

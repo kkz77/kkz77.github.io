@@ -61,6 +61,15 @@ function ProjectCard({ p }) {
             View on GitHub <span className="transition group-hover:translate-x-0.5 inline-block">→</span>
           </p>
         )}
+
+        {!hasLink && p.publicationHref && (
+          <a
+            href={p.publicationHref}
+            className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
+          >
+            📄 See publication ↓
+          </a>
+        )}
       </div>
     </Wrapper>
   )
