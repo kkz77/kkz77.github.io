@@ -46,7 +46,7 @@ export const education = [
 // Highlighted work. `link` opens the GitHub repo (or leave as null).
 export const projects = [
   {
-    title: 'Burmese News Summarization with NER',
+    title: 'Named Entity-Aware Model for Burmese Abstractive Summarization',
     tag: 'Research · JAIST, Japan',
     image: '/img/nlp.svg',
     featured: true,
