@@ -5,7 +5,7 @@
 
 export const profile = {
   name: 'Kaung Khant Zaw',
-  role: 'AI/ML & Computer Engineering Graduate',
+  role: 'Computer Engineering Graduate',
   tagline:
     'Recent Computer Engineering graduate from KMITL with a keen interest in NLP, deep reinforcement learning, and applied AI. I love learning by building, and I am looking for my first opportunity to grow and contribute to a great team.',
   location: 'Bangkok, Thailand',
