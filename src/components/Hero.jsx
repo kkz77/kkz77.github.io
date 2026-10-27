@@ -55,7 +55,7 @@ export default function Hero() {
               <img
                 src={profile.photo}
                 alt={profile.name}
-                className="relative h-full w-full rounded-full object-cover object-[50%_18%] ring-4 ring-line"
+                className="relative h-full w-full rounded-full object-cover object-[50%_32%] ring-4 ring-line"
               />
             ) : (
               <div className="relative flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-[rgb(var(--c-grad-from))] to-[rgb(var(--c-grad-to))] text-6xl font-extrabold text-white ring-4 ring-line">
