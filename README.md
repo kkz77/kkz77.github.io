@@ -1,36 +1,40 @@
-# Kaung Khant Zaw — Portfolio
+# Kaung Khant Zaw — Personal Portfolio
 
-Personal portfolio website built with **React + Vite + Tailwind CSS**, deployed to **GitHub Pages**.
+👋 Hi, I'm Kaung Khant Zaw, a Computer Engineering graduate from KMITL (Bangkok, Thailand)
+with a keen interest in NLP, deep reinforcement learning, and applied AI.
 
-## Run locally
+This repository holds the source for my personal portfolio website.
+
+### 🌐 Live site: **[kkz77.github.io](https://kkz77.github.io)**
+
+On the site you'll find:
+- A little about me and my education
+- Selected **projects and research** — from Burmese NLP and deep reinforcement learning to an award-winning AI safety app
+- My **publication** (IEEE Access, under review)
+- Skills, achievements, and ways to get in touch
+
+## Connect with me
+
+- 💼 LinkedIn: [kaung-khant-zaw77](https://www.linkedin.com/in/kaung-khant-zaw77)
+- 💻 GitHub: [@kkz77](https://github.com/kkz77)
+- 📧 Email: khantzawkaung2@gmail.com
+
+---
+
+## About this project
+
+The site is built with **React**, **Vite**, and **Tailwind CSS**, and deploys automatically to
+**GitHub Pages** on every push to `main`.
+
+<details>
+<summary>Running it locally (for the curious)</summary>
 
 ```bash
 npm install
-npm run dev
+npm run dev     # start the dev server (http://localhost:5173)
+npm run build   # production build into /dist
 ```
 
-Then open the URL it prints (usually http://localhost:5173).
+Most of the site's content lives in a single file, [`src/data/profile.js`](src/data/profile.js).
 
-## Edit your content
-
-Almost everything lives in one file: **`src/data/profile.js`**
-Update your name, tagline, projects, skills, and links there — no need to touch the components.
-
-To swap the résumé download: put your PDF in `public/resume.pdf`.
-
-## Build
-
-```bash
-npm run build      # outputs to /dist
-npm run preview    # preview the production build
-```
-
-## Deploy to GitHub Pages (automatic)
-
-1. Create a repo named **`kkz77.github.io`** (this makes the site live at `https://kkz77.github.io`).
-2. Push this project to the `main` branch.
-3. In the repo: **Settings → Pages → Build and deployment → Source = GitHub Actions**.
-4. Every push to `main` now builds and deploys automatically (see `.github/workflows/deploy.yml`).
-
-> If you instead name the repo something else (e.g. `portfolio`), set `base: '/portfolio/'`
-> in `vite.config.js` so asset paths resolve correctly.
+</details>
