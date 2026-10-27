@@ -4,3 +4,5 @@ dist
 *.local
 .vscode
 resume_original_backup.pdf
+
+.claude
