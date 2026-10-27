@@ -52,11 +52,13 @@ export default function Hero() {
           <div className="relative h-48 w-48 sm:h-56 sm:w-56">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[rgb(var(--c-grad-from))] to-[rgb(var(--c-grad-to))] opacity-40 blur-2xl" />
             {profile.photo ? (
-              <img
-                src={profile.photo}
-                alt={profile.name}
-                className="relative h-full w-full rounded-full object-cover object-[50%_32%] ring-4 ring-line"
-              />
+              <div className="relative h-full w-full overflow-hidden rounded-full ring-4 ring-line">
+                <img
+                  src={profile.photo}
+                  alt={profile.name}
+                  className="h-full w-full scale-110 -translate-x-1 object-cover object-[50%_52%]"
+                />
+              </div>
             ) : (
               <div className="relative flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-[rgb(var(--c-grad-from))] to-[rgb(var(--c-grad-to))] text-6xl font-extrabold text-white ring-4 ring-line">
                 {profile.name
